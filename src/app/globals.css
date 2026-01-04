@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap')
-layer(base);
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Patrick+Hand&display=swap')
 layer(base);
 
 @import 'tailwindcss';
@@ -94,11 +92,19 @@ layer(base);
 @layer utilities {
   html {
     scroll-behavior: smooth;
-    font-family: 'Inter Tight', sans-serif;
+    font-family: 'Patrick Hand', 'Comic Sans MS', 'Chalkboard SE', cursive;
     @apply dark:bg-dark_black;
   }
 
   body {
+    color: #2b241f;
+    background-color: #fff7e9;
+    background-image: radial-gradient(#f8d9e9 1px, transparent 1px),
+      radial-gradient(#d9f2ff 1px, transparent 1px),
+      linear-gradient(135deg, #fff7e9, #fef0ff);
+    background-size: 28px 28px, 32px 32px, 100% 100%;
+    background-position: 0 0, 16px 16px, 0 0;
+    background-attachment: fixed;
   }
 
   * {
@@ -139,19 +145,27 @@ layer(base);
   }
 
   h1 {
-    @apply 2xl:text-9xl 2xl:leading-[156px] md:text-7xl text-5xl font-medium text-dark_black dark:text-white;
+    font-family: 'Fredoka', 'Patrick Hand', 'Comic Sans MS', cursive;
+    letter-spacing: 0.5px;
+    @apply 2xl:text-9xl 2xl:leading-[156px] md:text-7xl text-5xl font-semibold text-dark_black dark:text-white;
   }
 
   h2 {
-    @apply text-4xl md:text-5xl font-medium text-dark_black dark:text-white;
+    font-family: 'Fredoka', 'Patrick Hand', 'Comic Sans MS', cursive;
+    letter-spacing: 0.4px;
+    @apply text-4xl md:text-5xl font-semibold text-dark_black dark:text-white;
   }
 
   h3 {
-    @apply text-5xl font-medium text-dark_black dark:text-white;
+    font-family: 'Fredoka', 'Patrick Hand', 'Comic Sans MS', cursive;
+    letter-spacing: 0.35px;
+    @apply text-5xl font-semibold text-dark_black dark:text-white;
   }
 
   h4 {
-    @apply text-2xl font-medium text-dark_black dark:text-white;
+    font-family: 'Fredoka', 'Patrick Hand', 'Comic Sans MS', cursive;
+    letter-spacing: 0.3px;
+    @apply text-2xl font-semibold text-dark_black dark:text-white;
   }
 
   h5 {
@@ -164,5 +178,26 @@ layer(base);
 
   p {
     @apply text-base  font-normal text-dark_black dark:text-white;
+  }
+
+  a {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+
+  button,
+  [role='button'] {
+    border: 2px solid #2b241f;
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 #2b241f;
+    transition: transform 120ms ease, box-shadow 120ms ease;
+  }
+
+  button:hover,
+  [role='button']:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 6px 6px 0 #2b241f;
   }
 }
